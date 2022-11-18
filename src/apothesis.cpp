@@ -131,6 +131,7 @@ void Apothesis::init()
         }
     }
 
+    //Create the sets where each process can be performed at the first time
     for ( auto &p:m_processMap ){
         for ( Site* s:pLattice->getSites() ){
             if ( p.first->rules( s ) )
