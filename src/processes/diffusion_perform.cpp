@@ -7,7 +7,7 @@ void simpleDiffusion( Diffusion* proc, Site* s){
 
     vector<Site* > toDiffuse;
     for ( Site* neigh:s->getNeighs() ) {
-        if ( !neigh->isOccupied() && s->getHeight() == neigh->getHeight() )
+        if ( !neigh->isOccupied() ) //&& s->getHeight() == neigh->getHeight() )
             toDiffuse.push_back( neigh );
     }
 

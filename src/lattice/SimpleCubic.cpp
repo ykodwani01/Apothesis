@@ -67,11 +67,11 @@ void SimpleCubic::setInitialHeight(int height) { m_iHeight = height; }
 
 void SimpleCubic::build()
 {
-    if (m_Type == NONE)
+/*    if (m_Type == NONE)
     {
         cout << "Not supported lattice type" << endl;
         EXIT
-    }
+    }*/
 
     if (m_iSizeX == 0 || m_iSizeY == 0)
     {

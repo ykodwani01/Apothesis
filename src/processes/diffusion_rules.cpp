@@ -20,7 +20,7 @@ bool diffusionBasicAllRule( Diffusion* proc, Site* s){
          || proc->countVacantSites(s) != proc->getNumVacantSites() ) return false;
 
     for ( Site* neigh:s->getNeighs() )
-        if ( !neigh->isOccupied() && neigh->getHeight() == s->getHeight() )
+        if ( !neigh->isOccupied() )// && neigh->getHeight() == s->getHeight() )
             return true;
 
     return false;

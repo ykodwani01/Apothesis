@@ -112,10 +112,37 @@ void Apothesis::init()
 
     // TODO: Here we must take into account the case of two or more species participating in the film growth
     // and the user should give the per cent of each species in t=0s e.g. 0.8Ga 0.2As
-    for ( Site* s:pLattice->getSites() ){
+/*    int perO = 0.8*pLattice->getSites().size();
+    int per = 0;
+
+    while ( per < perO  ){
+        int site = pRandomGen->getIntRandom(0, pLattice->getSites().size() -1  );
+        Site* s = pLattice->getSites().at( site );
+
+        if ( s->isOccupied() ) continue;
+        else {
+            s->setLabel(  "O2" );
+            s->setBelowLabel( "A*" );
+            s->setOccupied( true ); //Start from clear surface
+            per++;
+        }
+    }
+
+    for ( Site* s:pLattice->getSites() ) {
+        //randomly partiction 80% and 20%
+        if ( !s->isOccupied() ) {
+            s->setLabel(  pParameters->getLatticeLabels() );
+            s->setBelowLabel(  pParameters->getLatticeLabels() );
+            s->setOccupied( false ); //Start from clear surface
+        }
+    }*/
+
+    for ( Site* s:pLattice->getSites() ) {
+        //randomly partiction 80% and 20%
         s->setLabel(  pParameters->getLatticeLabels() );
         s->setBelowLabel(  pParameters->getLatticeLabels() );
         s->setOccupied( false ); //Start from clear surface
+
     }
 
     if ( pLattice->hasSteps() )
