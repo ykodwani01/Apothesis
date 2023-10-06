@@ -87,6 +87,8 @@ private:
   int m_iMinNeigs;
 
   int m_iSiteNeighsNum;
+
+  Lattice* m_lattice;
 };
 
 #endif // LATTICE_H
